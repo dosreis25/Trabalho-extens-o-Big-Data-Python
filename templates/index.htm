@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Chamados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Chamados</h1>
+    <a href="{{ url_for('criar_chamado') }}">Criar Novo Chamado</a><br>
+    <a href="{{ url_for('listar_chamados') }}">Listar Chamados</a>
+</body>
+</html>

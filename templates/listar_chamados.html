@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Chamados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Chamados</h1>
+    <ul>
+        {% for chamado in chamados %}
+            <li><a href="{{ url_for('ver_chamado', id=chamado[0]) }}">{{ chamado[1] }}</a> - {{ chamado[3] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
